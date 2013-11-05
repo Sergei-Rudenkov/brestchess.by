@@ -1,4 +1,6 @@
 Katashuk::Application.routes.draw do
+  get "admin_sing_up/admin"
+
   get "static_pages/home"
 
   get "static_pages/contacts"
@@ -6,6 +8,16 @@ Katashuk::Application.routes.draw do
   get "static_pages/news"
 
   get "static_pages/tournaments"
+  
+  get "static_pages/soon"
+  
+  get "static_pages/trips"
+    
+  get "static_pages/lit"
+      
+  get "static_pages/couchroom"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

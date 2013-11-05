@@ -10,4 +10,16 @@ class StaticPagesController < ApplicationController
 
   def tournaments
   end
+  
+  def soon
+  end 
+  
+  def trips
+  end
+  
+  def lit
+  end
+  
+  def couchroom
+  end
 end

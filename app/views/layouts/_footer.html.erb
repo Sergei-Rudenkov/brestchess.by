@@ -1,11 +1,20 @@
 #encoding: utf-8
+<small>Каташук Владислав</small>
 <footer class="footer">
-  <small>
-Каташук Владислав
-  </small>
-  <nav>
+	
+	  <nav>
     <ul>
-      <li><%= link_to "Контакты",   '#' %></li>
+
+		<li><%= link_to "Контакты",   static_pages_contacts_path %></li>
+		<li><%= link_to "Скоро",   static_pages_soon_path %></li>
+		<li><%= link_to "Путешествия",   static_pages_trips_path %></li>
+		<li><%= link_to "Литература",   static_pages_lit_path %></li>
+		<li><%= link_to "Тренерская",   static_pages_couchroom_path %></li>   
     </ul>
   </nav>
+
+  	<%= link_to image_tag("vk.png", size: "28x28"), 'http://vk.com/' %>
+	<%= link_to image_tag("fb.png", size: "30x30"), 'http://facebook.com/' %>
+
 </footer>
+

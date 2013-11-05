@@ -1,0 +1,3 @@
+module AdminSingUpHelper
+
+end
