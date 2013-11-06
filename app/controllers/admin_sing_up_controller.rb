@@ -1,7 +1,7 @@
 class AdminSingUpController < ApplicationController
   def admin
   @admin = Admin.new
-	 admin_log = Admin.find_by_email(@admin[:email].downcase)
+	 admin_log = Admin.find_by_email(@admin[:email])
    if admin_log != nil && admin_log.authenticate(@admin[:password])
     render 'static_pages/home'
     

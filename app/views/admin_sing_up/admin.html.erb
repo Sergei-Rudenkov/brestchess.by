@@ -3,13 +3,13 @@
 
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@admin) do |f| %>
+    <%= form_for( "/admin_sing_up/admin", method: "post") do |f| %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field @admin[:email] %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field @admin[:password] %>
 
       <%= f.submit "Вход", class: "btn btn-large btn-primary" %>
     <% end %>
