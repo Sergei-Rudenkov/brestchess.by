@@ -5,7 +5,7 @@ resources :sessions, only: [:new, :create, :destroy]
   match '/signout', to: 'sessions#destroy', via: :delete
   get "static_pages/home"
   get "static_pages/contacts"
-  get "static_pages/news"
+  get 'static_pages/news'
   get "static_pages/tournaments"
   get "static_pages/soon"
   get "static_pages/trips"
