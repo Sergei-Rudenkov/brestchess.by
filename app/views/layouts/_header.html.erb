@@ -1,19 +1,23 @@
 #encoding: utf-8
 <header class="navbar navbar-fixed-top navbar-inverse">
+
   <div class="navbar-inner">
 	  
     <div class="container">
-		
-      <%= link_to "Частная лавочка", static_pages_home_path  , id: "logo" %>
+			
+      <%= link_to "Частная лавочка", root_path  , id: "logo" %>
       
-      <nav>
+      <nav> 
         <ul class="nav pull-right">
-          <li><%= link_to "Новости",    static_pages_news_path %></li>
-          <li><%= link_to "Турниры",    static_pages_tournaments_path %></li>
+          <li><%= link_to "Новости",    news_path %></li>
+          <li><%= link_to "Турниры",    tournaments_path %></li>
           <li><%= link_to "Вход",    signin_path %></li>
         </ul>
+     
       </nav>
+       
     </div>
+  
   </div>
- 
+
 </header>

@@ -1,73 +1,29 @@
 Katashuk::Application.routes.draw do  
 resources :sessions, only: [:new, :create, :destroy]
-  #root to: 'static_pages#home'
+  root to: 'static_pages#home'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  get "static_pages/home"
-  get "static_pages/contacts"
-  get 'static_pages/news'
-  get "static_pages/tournaments"
-  get "static_pages/soon"
-  get "static_pages/trips"
-  get "static_pages/lit"
-  get "static_pages/couchroom"
+ #get "static_pages/home"
+ # get "static_pages/contacts"
+ # get 'static_pages/news'
+  # get "static_pages/tournaments"
+  #get "static_pages/soon"
+  #get "static_pages/trips"
+  #get "static_pages/lit"
+  #get "static_pages/couchroom"
+  
+  match '/news', to: 'static_pages#news'
+  match '/tournaments', to: 'static_pages#tournaments'
+  match '/soon', to: 'static_pages#soon'
+  match '/contacts', to: 'static_pages#contacts'
+  match '/trips', to: 'static_pages#trips'
+  match '/news', to: 'static_pages#news'
+  match '/lit', to: 'static_pages#lit'
+  match '/couchroom', to: 'static_pages#couchroom'
+  #match '/contacts', to: 'static_pages#contacts'
+  #match '/trips', to: 'static_pages#trips'
 
 
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
 
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
 end
