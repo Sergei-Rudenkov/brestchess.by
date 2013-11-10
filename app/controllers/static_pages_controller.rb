@@ -11,8 +11,8 @@ class StaticPagesController < ApplicationController
   def tournaments
   end
   
-  def soon
-  end 
+#  def soon
+#  end 
   
   def trips
   end

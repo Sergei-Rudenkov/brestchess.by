@@ -1,4 +1,9 @@
 Katashuk::Application.routes.draw do  
+
+
+  resources :soonevents
+
+
 resources :sessions, only: [:new, :create, :destroy]
   root to: 'static_pages#home'
   
@@ -16,7 +21,7 @@ resources :sessions, only: [:new, :create, :destroy]
   
   match '/news', to: 'static_pages#news'
   match '/tournaments', to: 'static_pages#tournaments'
-  match '/soon', to: 'static_pages#soon'
+  #match '/soon', to: 'static_pages#soon'
   match '/contacts', to: 'static_pages#contacts'
   match '/trips', to: 'static_pages#trips'
   match '/news', to: 'static_pages#news'

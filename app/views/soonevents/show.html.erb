@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h3>
+  <%= @soonevent.title %>
+</h3>
+
+<p>
+
+  <%= @soonevent.content %>
+</p>
+
+<% if signed_in? %>
+<%= link_to 'Edit', edit_soonevent_path(@soonevent) %> |
+<%= link_to 'Back', soonevents_path %>
+<% end %>
