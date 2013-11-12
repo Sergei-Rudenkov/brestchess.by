@@ -6,7 +6,7 @@
 
 <p>
 
-  <%= @soonevent.content %>
+  <%= markdown(@soonevent.content) %>
 </p>
 
 <% if signed_in? %>

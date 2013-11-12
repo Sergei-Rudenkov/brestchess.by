@@ -3,22 +3,24 @@
 <h4>  <%= link_to 'Создать новое объявление', new_soonevent_path %> </h4> 
 <% end %>
 <table>
-<% @soonevents.each do |soonevent| %>
+<% @soonevents.reverse.each do |soonevent| %>
   
     <tr> <h4> <%= soonevent.title %> </h4> </tr>
   
-    <tr><p> <%= soonevent.content %> </p>
+    <tr><p> <%= markdown(soonevent.content)%> </p>
 
 
-    <%= link_to 'Показать', soonevent %> &nbsp
+
     		<% if signed_in? %>
+    <%= link_to 'Показать', soonevent %> &nbsp
     <%= link_to 'Правка', edit_soonevent_path(soonevent) %> &nbsp
     <%= link_to 'Удалить', soonevent, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp
 		<% end %>
   </tr>
+
 <% end %>
+
 </table>
 
-
-
+  <%= will_paginate @soonevents %>
 
