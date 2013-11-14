@@ -1,11 +1,10 @@
 Katashuk::Application.routes.draw do  
 
-
+  resources :homes
   resources :soonevents
-
-
-resources :sessions, only: [:new, :create, :destroy]
-  root to: 'static_pages#home'
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  root to: 'homes#index'
   
   #root :controller => 'static_pages', :action => 'home' 
   match '/signin',  to: 'sessions#new'

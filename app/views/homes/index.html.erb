@@ -1,0 +1,20 @@
+<% @homes.each do |home| %>
+
+<div class="center hero-unit">
+	
+  <h1><%= home.h1 %></h1>
+
+  <h2>
+  <%= home.h2 %>
+  </h2>
+  <%= link_to "Подробнее", home.button, class: "btn btn-large btn-primary" %>
+  <br>
+  <br>
+ <%= markdown(home.img)%>
+</div>
+
+<% if signed_in? %>
+    <td><%= link_to 'Изменить главную новость', edit_home_path(home) %></td>
+<%end%>
+    <br>
+ <% end %>

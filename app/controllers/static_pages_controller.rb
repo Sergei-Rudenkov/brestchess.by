@@ -1,6 +1,4 @@
 class StaticPagesController < ApplicationController
-  def home
-  end
 
   def contacts
   end
@@ -10,10 +8,7 @@ class StaticPagesController < ApplicationController
 
   def tournaments
   end
-  
-#  def soon
-#  end 
-  
+
   def trips
   end
   

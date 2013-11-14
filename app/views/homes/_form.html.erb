@@ -1,0 +1,41 @@
+<%= form_for(@home) do |f| %>
+  <% if @home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% @home.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Заголовок %><br />
+    <%= f.text_field :h1 %>
+  </div>
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Подзаголовок %><br />
+    <%= f.text_field :h2 %>
+  </div>
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Ссылка_кнопка %><br />
+    <%= f.text_field :button %>
+  </div>
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Фото_ссылка %><br />
+    <%= f.text_field :img %>
+  </div>
+  <br>
+  <br>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

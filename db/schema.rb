@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131110142221) do
+ActiveRecord::Schema.define(:version => 20131114110055) do
 
   create_table "admins", :force => true do |t|
     t.string   "email"
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(:version => 20131110142221) do
   end
 
   add_index "admins", ["remember_token"], :name => "index_admins_on_remember_token"
+
+  create_table "homes", :force => true do |t|
+    t.string   "h1"
+    t.string   "h2"
+    t.string   "button"
+    t.string   "img"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "soonevents", :force => true do |t|
     t.string   "title"
