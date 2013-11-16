@@ -1,0 +1,29 @@
+<%= form_for(@newsline) do |f| %>
+  <% if @newsline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@newsline.errors.count, "error") %> prohibited this newsline from being saved:</h2>
+
+      <ul>
+      <% @newsline.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Заголовок_новости %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Описание_будет_видно_в_ленте %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :Контент_подробнее %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

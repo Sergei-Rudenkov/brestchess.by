@@ -1,5 +1,8 @@
 Katashuk::Application.routes.draw do  
 
+  resources :newslines
+
+
   resources :homes
   resources :soonevents
   resources :sessions, only: [:new, :create, :destroy]
@@ -18,12 +21,12 @@ Katashuk::Application.routes.draw do
   #get "static_pages/lit"
   #get "static_pages/couchroom"
   
-  match '/news', to: 'static_pages#news'
+ # match '/news', to: 'static_pages#news'
   match '/tournaments', to: 'static_pages#tournaments'
   #match '/soon', to: 'static_pages#soon'
   match '/contacts', to: 'static_pages#contacts'
   match '/trips', to: 'static_pages#trips'
-  match '/news', to: 'static_pages#news'
+ # match '/news', to: 'static_pages#news'
   match '/lit', to: 'static_pages#lit'
   match '/couchroom', to: 'static_pages#couchroom'
   #match '/contacts', to: 'static_pages#contacts'

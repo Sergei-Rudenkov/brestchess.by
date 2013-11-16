@@ -1,0 +1,27 @@
+
+
+
+
+<% if signed_in? %>
+<h4>  <%= link_to 'Создать новость', new_newsline_path %> </h4> 
+<% end %>
+<table>
+<% @newslines.reverse.each do |newsline| %>
+  
+    <tr> <h1> <%= newsline.title %> </h1> </tr>
+  
+    <tr><p> <%= markdown(newsline.description)%> </p>
+
+
+  <h4>  <%= link_to 'Подробнее', newsline %> </h4>
+    		<% if signed_in? %>
+    <%= link_to 'Правка', edit_newsline_path(newsline) %> &nbsp
+    <%= link_to 'Удалить', newsline, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp
+		<% end %>
+  </tr>
+
+<% end %>
+
+</table>
+
+  <%= will_paginate @newslines %>

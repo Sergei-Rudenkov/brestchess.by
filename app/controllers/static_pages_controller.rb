@@ -3,9 +3,6 @@ class StaticPagesController < ApplicationController
   def contacts
   end
 
-  def news
-  end
-
   def tournaments
   end
 
