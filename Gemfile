@@ -28,3 +28,7 @@ end
 gem 'bcrypt-ruby', '3.0.1'
 gem "redcarpet"
 gem 'will_paginate', '~> 3.0'
+group :production do
+  gem 'pg', '0.12.2'
+  gem 'therubyracer-heroku', '0.8.1.pre3'
+end
