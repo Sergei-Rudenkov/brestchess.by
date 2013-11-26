@@ -8,7 +8,7 @@
 <table>
 <% @newslines.reverse.each do |newsline| %>
   
-    <tr> <h1> <%= newsline.title %> </h1> </tr>
+    <tr> <h3> <%= newsline.title %> </h3> </tr>
   
     <tr><p> <%= markdown(newsline.description)%> </p>
 
