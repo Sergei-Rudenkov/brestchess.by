@@ -2,10 +2,10 @@
 
 
 <% @students.each do |student| %>
-  
+  <tr>
     <h4><%= link_to student.name, student %></h4> 
     	<% if signed_in? %> 
-    <tr>	
+    	
     <td><%= link_to 'Правка', edit_student_path(student) %></td> |
     <td><%= link_to 'Удалить', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 <% end %>
@@ -14,5 +14,6 @@
 </table>
 
 <br />
-
+<% if signed_in? %>
 <%= link_to 'New Student', new_student_path %>
+<% end %>
