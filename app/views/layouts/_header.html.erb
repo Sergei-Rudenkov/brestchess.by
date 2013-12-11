@@ -6,7 +6,7 @@
     <div class="container">
 		
 			
-      <%= link_to "Частная лавочка", root_path  , id: "logo" %>
+      <%= link_to "Cherepov Chess", root_path  , id: "logo" %>
       
       <nav> 
         <ul class="nav pull-right">
@@ -19,8 +19,6 @@
 				    <li><%= link_to "Турниры",    tournaments_path %></li>
 					<li><%= link_to "Скоро",   soonevents_path %></li>
 					<li><%= link_to "Путешествия",   trips_path %></li>
-					<li><%= link_to "Чемпионаты Бреста",   "#" %></li>
-					<li><%= link_to "Кубок Каташука",  "#" %></li>
               </ul>
             </li>
            <% if signed_in? %>
