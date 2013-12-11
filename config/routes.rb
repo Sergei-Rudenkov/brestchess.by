@@ -1,5 +1,8 @@
 Katashuk::Application.routes.draw do  
 
+  resources :students
+
+
   resources :newslines
 
 

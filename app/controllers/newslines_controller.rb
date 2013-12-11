@@ -24,22 +24,26 @@ class NewslinesController < ApplicationController
   # GET /newslines/new
   # GET /newslines/new.json
   def new
+  if signed_in?
     @newsline = Newsline.new
 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @newsline }
+      end
     end
   end
 
   # GET /newslines/1/edit
   def edit
+  if signed_in?
     @newsline = Newsline.find(params[:id])
   end
-
+end
   # POST /newslines
   # POST /newslines.json
   def create
+  if signed_in?
     @newsline = Newsline.new(params[:newsline])
 
     respond_to do |format|
@@ -52,10 +56,12 @@ class NewslinesController < ApplicationController
       end
     end
   end
+ end
 
   # PUT /newslines/1
   # PUT /newslines/1.json
   def update
+  if signed_in?
     @newsline = Newsline.find(params[:id])
 
     respond_to do |format|
@@ -68,10 +74,11 @@ class NewslinesController < ApplicationController
       end
     end
   end
-
+end
   # DELETE /newslines/1
   # DELETE /newslines/1.json
   def destroy
+  if signed_in?
     @newsline = Newsline.find(params[:id])
     @newsline.destroy
 
@@ -80,4 +87,5 @@ class NewslinesController < ApplicationController
       format.json { head :no_content }
     end
   end
+end
 end

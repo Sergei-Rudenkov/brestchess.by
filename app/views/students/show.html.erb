@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h3>
+  <%= @student.name %>
+</h3>
+
+<p>
+  <%= markdown(@student.description) %>
+</p>
+
+<% if signed_in? %>
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<% end %>
+<%= link_to 'Назад', students_path %>
