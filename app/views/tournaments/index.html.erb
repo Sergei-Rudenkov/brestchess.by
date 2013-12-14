@@ -1,0 +1,22 @@
+<h1>Турниры</h1>
+<% if signed_in? %>
+<h4>  <%= link_to 'Создать новый турнир', new_tournament_path %> </h4> 
+<% end %>
+<table>
+<% @tournaments.reverse.each do |tournament| %>
+  
+    <tr> <h4> <%= link_to tournament.title, tournament %> </h4> </tr>
+  
+    <tr><p> <%= markdown(tournament.description)%> </p>
+    	<% if signed_in? %>
+    <%= link_to 'Правка', edit_tournament_path(soonevent) %> &nbsp
+    <%= link_to 'Удалить', tournament, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp
+		<% end %>
+  </tr>
+
+<% end %>
+
+</table>
+
+  <%= will_paginate @soonevents %>
+    

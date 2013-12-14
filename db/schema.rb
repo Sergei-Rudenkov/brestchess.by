@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131211215448) do
+ActiveRecord::Schema.define(:version => 20131214191942) do
 
   create_table "admins", :force => true do |t|
     t.string   "email"
@@ -23,6 +23,12 @@ ActiveRecord::Schema.define(:version => 20131211215448) do
   end
 
   add_index "admins", ["remember_token"], :name => "index_admins_on_remember_token"
+
+  create_table "contacts", :force => true do |t|
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "homes", :force => true do |t|
     t.string   "h1"
@@ -61,6 +67,14 @@ ActiveRecord::Schema.define(:version => 20131211215448) do
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tournaments", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
   end
 
   create_table "users", :force => true do |t|

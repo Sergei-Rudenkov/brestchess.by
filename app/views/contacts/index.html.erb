@@ -1,0 +1,9 @@
+<% @contacts.each do |contact| %>
+  <tr>
+    <td><%= markdown(contact.content) %></td>
+ <% if signed_in? %>
+    <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
