@@ -8,6 +8,8 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  birthday    :string(255)
+#  achievement :string(255)
 #
 
 require 'spec_helper'

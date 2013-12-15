@@ -8,8 +8,10 @@
 #  description :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  birthday    :string(255)
+#  achievement :string(255)
 #
 
 class Student < ActiveRecord::Base
-  attr_accessible :description, :name, :rating, :birthday, :achievement
+  attr_accessible :description, :name, :rating, :birthday, :achievement 
 end
