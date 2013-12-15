@@ -1,6 +1,6 @@
 Katashuk::Application.routes.draw do  
 
-  resources :contacts
+  resources :contacts, only: [:index, :update, :edit]
 
 
   resources :tournaments
@@ -12,7 +12,7 @@ Katashuk::Application.routes.draw do
   resources :newslines
 
 
-  resources :homes
+  resources :homes, only: [:index, :update, :edit]
   resources :soonevents
   resources :sessions, only: [:new, :create, :destroy]
   
