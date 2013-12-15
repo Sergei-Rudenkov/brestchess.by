@@ -11,5 +11,5 @@
 #
 
 class Student < ActiveRecord::Base
-  attr_accessible :description, :name, :rating
+  attr_accessible :description, :name, :rating, :birthday, :achievement
 end
