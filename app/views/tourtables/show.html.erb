@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tourtable.name %>
+</p>
+
+<p>
+  <b>Waitresult:</b>
+  <%= @tourtable.waitresult %>
+</p>
+
+<p>
+  <b>Result:</b>
+  <%= @tourtable.result %>
+</p>
+
+<p>
+  <b>Tournament:</b>
+  <%= @tourtable.tournament %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @tourtable.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_tourtable_path(@tourtable) %> |
+<%= link_to 'Back', tourtables_path %>

@@ -1,0 +1,25 @@
+
+<div class="panel panel-default">
+ <!-- Default panel contents -->
+  <div class="panel-heading"> ФИО, возраст, прогноз  </div>	
+    <!-- Table -->
+  <table class="table">
+<% @tourtables.each do |student| %>
+  <tr>
+	  
+     <td> <%= student.name %></td>
+    <td><%= student.tournament %> </td>
+    <td><%= student.waitresult %> </td>
+    	<% if signed_in? %> 
+    <td><%= link_to 'Правка', edit_tourtable_path(student) %></td>
+    <td><%= link_to 'Удалить', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+  </tr>
+<% end %>
+</table>
+  </table>
+</div>
+<br />
+<% if signed_in? %>
+<%= link_to 'New Student', new_tourtable_path %>
+<% end %>

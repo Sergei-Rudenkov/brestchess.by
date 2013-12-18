@@ -1,5 +1,8 @@
 Katashuk::Application.routes.draw do  
 
+  resources :tourtables
+
+
   resources :contacts, only: [:index, :update, :edit]
 
 
