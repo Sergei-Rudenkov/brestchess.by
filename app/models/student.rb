@@ -13,5 +13,6 @@
 #
 
 class Student < ActiveRecord::Base
+default_scope order('id ASC')
   attr_accessible :description, :name, :rating, :birthday, :achievement 
 end

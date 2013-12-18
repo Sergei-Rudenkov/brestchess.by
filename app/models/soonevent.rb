@@ -10,5 +10,6 @@
 #
 
 class Soonevent < ActiveRecord::Base
+default_scope order('id ASC')
   attr_accessible :content, :title
 end

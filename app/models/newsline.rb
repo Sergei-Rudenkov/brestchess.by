@@ -11,5 +11,6 @@
 #
 
 class Newsline < ActiveRecord::Base
+default_scope order('id ASC')
   attr_accessible :content, :description, :title
 end

@@ -11,5 +11,6 @@
 #
 
 class Tournament < ActiveRecord::Base
+default_scope order('id ASC')
   attr_accessible :content, :title, :description
 end
