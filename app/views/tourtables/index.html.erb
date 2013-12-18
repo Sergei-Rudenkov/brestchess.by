@@ -1,15 +1,16 @@
 
 <div class="panel panel-default">
  <!-- Default panel contents -->
-  <div class="panel-heading"> ФИО, возраст, прогноз  </div>	
+  <div class="panel-heading">  Мой прогноз на турнир. Буду рад своей ошибке в вашу сторону! </div>	
     <!-- Table -->
   <table class="table">
 <% @tourtables.each do |student| %>
   <tr>
 	  
-     <td> <%= student.name %></td>
+     <td> <%= student.name %></td> 
     <td><%= student.tournament %> </td>
     <td><%= student.waitresult %> </td>
+    <td><%= student.city %> </td>
     	<% if signed_in? %> 
     <td><%= link_to 'Правка', edit_tourtable_path(student) %></td>
     <td><%= link_to 'Удалить', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
