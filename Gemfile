@@ -32,3 +32,8 @@ group :production do
   gem 'pg', '0.12.2'
   gem 'therubyracer-heroku', '0.8.1.pre3'
 end
+ gem 'textile_editor_helper'
+
+ gem 'RedCloth'
+
+ gem 'htmlentities'

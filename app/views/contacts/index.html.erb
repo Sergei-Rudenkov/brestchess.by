@@ -1,6 +1,6 @@
 <% @contacts.each do |contact| %>
   <tr>
-    <td><%= markdown(contact.content) %></td>
+    <td><%= raw safe_textilize(contact.content) %></td>
  <% if signed_in? %>
     <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
     <% end %>

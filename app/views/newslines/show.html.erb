@@ -6,7 +6,7 @@
 </h1>
 
 <p> 
-  <%= markdown(@newsline.content) %>
+  <%= raw safe_textilize(@newsline.content) %>
 </p>
 
 <% if signed_in? %>

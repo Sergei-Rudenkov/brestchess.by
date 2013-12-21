@@ -9,7 +9,7 @@
   
     <tr><p> <%= markdown(tournament.description)%> </p>
     	<% if signed_in? %>
-    <%= link_to 'Правка', edit_tournament_path(soonevent) %> &nbsp
+    <%= link_to 'Правка', edit_tournament_path(tournament) %> &nbsp
     <%= link_to 'Удалить', tournament, method: :delete, data: { confirm: 'Are you sure?' } %> &nbsp
 		<% end %>
   </tr>

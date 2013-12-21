@@ -7,7 +7,7 @@
   
     <tr> <h4> <%= soonevent.title %> </h4> </tr>
   
-    <tr><p> <%= markdown(soonevent.content)%> </p>
+    <tr><p> <%= raw safe_textilize(soonevent.content)%> </p>
 
 
 

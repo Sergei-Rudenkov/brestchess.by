@@ -4,11 +4,9 @@
   <%= @tournament.title %>
 </h3>
 
-<p>
-
-  <%= markdown(@tournament.content) %>
-</p>
-
+<%= raw safe_textilize(@tournament.content) %>
+  
+<br>
 <% if signed_in? %>
 <%= link_to 'Edit', edit_tournament_path(@tournament) %> |
 <%= link_to 'Back', tournaments_path %>

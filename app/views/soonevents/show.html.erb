@@ -6,7 +6,7 @@
 
 <p>
 
-  <%= markdown(@soonevent.content) %>
+  <%= raw safe_textilize(@soonevent.content) %>
 </p>
 
 <% if signed_in? %>

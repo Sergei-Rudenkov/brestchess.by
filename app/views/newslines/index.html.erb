@@ -10,7 +10,7 @@
   
     <tr> <h3> <%= newsline.title %> </h3> </tr>
   
-    <tr><p> <%= markdown(newsline.description)%> </p>
+    <tr><p> <%= raw safe_textilize(newsline.description)%> </p>
 
 
   <h4>  <%= link_to 'Подробнее', newsline %> </h4>
