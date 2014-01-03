@@ -1,0 +1,29 @@
+<%= form_for(@litra) do |f| %>
+  <% if @litra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@litra.errors.count, "error") %> prohibited this litra from being saved:</h2>
+
+      <ul>
+      <% @litra.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+    <div class="field">
+    <%= f.label :shortdescript %><br />
+    <%= f.text_field :shortdescript %>
+  </div>
+  <div class="field">
+    <%= f.label :main %><br />
+    <%= f.text_area :main %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

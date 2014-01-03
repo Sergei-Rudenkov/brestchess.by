@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h3>
+  <%= @litra.title %>
+</h3>
+
+<p>
+  <%= raw safe_textilize(@litra.main) %>
+</p>
+
+<% if signed_in? %>
+<%= link_to 'Edit', edit_litra_path(@litra) %> |
+<% end %>
+<%= link_to 'Назад', litras_path %>

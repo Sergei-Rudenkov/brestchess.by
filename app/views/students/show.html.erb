@@ -5,7 +5,7 @@
 </h3>
 
 <p>
-  <%= markdown(@student.description) %>
+  <%= raw safe_textilize(@student.description) %>
 </p>
 
 <% if signed_in? %>

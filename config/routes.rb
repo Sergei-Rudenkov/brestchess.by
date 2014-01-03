@@ -1,5 +1,8 @@
 Katashuk::Application.routes.draw do  
 
+  resources :litras
+
+
   resources :tourtables
 
 
@@ -24,6 +27,6 @@ Katashuk::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/trips', to: 'static_pages#trips'
 
-  match '/lit', to: 'static_pages#lit'
+
 
 end

@@ -1,0 +1,23 @@
+<h3> Литература </h3>
+<div class="panel panel-default">
+ <!-- Default panel contents -->
+  <div class="panel-heading"> </div>	
+    <!-- Table -->
+  <table class="table">
+<% @litras.each do |litra| %>
+  <tr>
+    <td><h5><%= link_to litra.title, litra %></h5></td>
+    <td><%= raw safe_textilize(litra.shortdescript) %></td>
+    <% if signed_in? %>
+    <td><%= link_to 'Редактировать', edit_litra_path(litra) %></td>
+    <td><%= link_to 'Удалить', litra, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+  </table>
+</div>
+<br />
+<% if signed_in? %>
+<%= link_to 'Добавить книгу', new_litra_path %>
+<% end %>
